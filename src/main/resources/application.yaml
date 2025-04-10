@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: popcorn-palace
+  datasource:
+    url: jdbc:postgresql://localhost:5432/popcorn-palace
+    username: popcorn-palace
+    password: popcorn-palace
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC  # Ensure consistent time zone handling
+        format_sql: true
+  sql:
+    init:
+      mode: never
+
+debug: true
