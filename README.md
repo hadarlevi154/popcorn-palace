@@ -10,11 +10,17 @@ Welcome to Popcorn Palace, a modern and scalable movie ticket booking system des
 **Ticket Booking System**	
 Key Features:
 ○	Allow users to book tickets for available showtimes (Create booking).
+
 ○	Fetch booking by id.
+
 ○	Fetch all bookings.
+
 ○	Update a booking to add or remove seats. The system automatically handles price recalculation and seat availability.
+
 ○	Delete a booking. The system automatically handles seat availability.
+
 ●	Constraints:
+
 ○	Ensure no seat is booked twice for the exact showtime, using locking.
 
 **Movie Management:**
@@ -129,32 +135,61 @@ spring.jpa.show-sql=true
 
 ## API Endpoints
 
-Create a Booking
+Bookings:
+1) Create a Booking
 POST /api/bookings
 
-Request Body:
+2) Update an Existing Booking (Can be partially).
+PUT /api/bookings/{bookingId}
 
-json
-Copy
-{
-  "showtimeId": 1,
-  "userNameId": 2,
-  "numOfTickets": 2,
-  "totalPrice": 200.00,
-  "seats": [
-    {
-      "seatNumber": "A1",
-      "seatType": "VIP",
-      "price": 100.00
-    },
-    {
-      "seatNumber": "A2",
-      "seatType": "VIP",
-      "price": 100.00
-    }
-  ],
-  "purchaseTime": "2025-04-09T18:30:00"
-}
+3) Get Booking by Id
+   GET /api/bookings/{bookingId}
+   
+6) Fetch all bookings.
+  GET /api/bookings
+
+5) Delete a booking.
+  DELETE /api/bookings/{bookingId}
+
+Movies:
+1) Create a Movie
+   POST /api/movies
+   
+2) Update an Existing movie (Can be partially)
+   PUT /api/movies/{movieId}
+   
+3) Delete a movie.
+   DELETE /api/movies/{movieId}
+   
+4) Fetch all movies.
+   GET /api/movies
+   
+5) Fetch movie by Id.
+   GET /api/movies/{movieId}
+
+Showtimes:
+1) Add showtime for movie
+2) Update showtime details (Can be partially).
+3) Delete a showtime.
+3) Fetch showtime by id.
+4) Fetch all showtimes.
+
+Users:
+1) Register a new user.
+2) Fetch user by id.
+3) Fetch user by username.
+4) Fetch all users.
+
+Theaters:
+1) Create a new theater.
+2) Fetch theater by id.
+3) Fetch all theaters.
+4) Update theater Inforamtion (such as capacity etc.).
+5) Delete a theater.
+
+Seats:
+1) get available seats by show.
+2) get seats by booking.
 
 ## Security Considerations
 
