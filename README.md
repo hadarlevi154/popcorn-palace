@@ -266,19 +266,31 @@ Example of response -
 
 {
 "bookingId": 1,
+
 "showtimeId": 1,
+
 "userName": "hadarlevi154",
+
 "numOfTickets": 1,
+
 "totalPrice": 100.0,
+
 "seats": [
+
 {
 "seatId": 19,
+
 "seatNumber": "A3",
+
 "seatType": "VIP",
+
 "price": 100.0
 }
+
 ],
+
 "purchaseTime": "2025-04-08T10:30:00"
+
 }
 
 Error status-
@@ -297,35 +309,58 @@ Example of Response-
 [
 {
 "bookingId": 1,
+
 "showtimeId": 1,
+
 "userName": "hadarlevi154",
+
 "numOfTickets": 1,
+
 "totalPrice": 150.0,
+
 "seats": [
+
 {
 "seatId": 19,
+
 "seatNumber": "A3",
+
 "seatType": "VIP",
+
 "price": 150.0
+
 }
 ],
+
 "purchaseTime": "2025-04-10T16:16:11.749211"
+
 },
 {
 "bookingId": 2,
+
 "showtimeId": 1,
+
 "userName": "john_doe",
+
 "numOfTickets": 1,
+
 "totalPrice": 160.0,
+
 "seats": [
+
 {
 "seatId": 18,
+
 "seatNumber": "A2",
+
 "seatType": "VIP",
+
 "price": 160.0
+
 }
 ],
 "purchaseTime": "2025-04-09T21:10:02.230374"
+
 }
 ]
 
@@ -358,10 +393,15 @@ Example of response-
 
 {
 "movieId": 7,
+
 "title": "AquaMan 4",
+
 "genre": "Scify",
+
 "duration": 130,
+
 "rating": 9.0,
+
 "releaseYear": 2025
 }
 
@@ -379,11 +419,17 @@ Status code-
 Example of response-
 {
 "movieId": 1,
+
 "title": "AquaMan 2",
+
 "genre": "Scify",
+
 "duration": 148,
+
 "rating": 9.2,
+
 "releaseYear": 2018
+
 }
 
 Error status-
@@ -710,9 +756,13 @@ Example of response-
 },
 {
 "theaterId": 2,
+
 "theaterName": "Luxury Cinema",
+
 "theaterLocation": "Uptown",
+
 "theaterCapacity": 100
+
 }
 ]
 
@@ -731,8 +781,11 @@ Example of response-
 
 {
 "theaterId": 6,
+
 "theaterName": "Luxury Cinema Updated Capacity",
+
 "theaterLocation": "Uptown",
+
 "theaterCapacity": 150
 }
 
@@ -765,8 +818,11 @@ Example of response-
 [
 {
 "seatId": 19,
+
 "seatNumber": "A3",
+
 "seatType": "VIP",
+
 "price": 150.0
 }
 ]
@@ -783,8 +839,11 @@ Example of response-
 [
 {
 "seatId": 19,
+
 "seatNumber": "A3",
+
 "seatType": "VIP",
+
 "price": 150.0
 }
 ]
