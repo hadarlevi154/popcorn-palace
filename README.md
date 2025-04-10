@@ -9,6 +9,7 @@ Welcome to Popcorn Palace, a modern and scalable movie ticket booking system des
 
 **Ticket Booking System**	
 Key Features:
+
 ○	Allow users to book tickets for available showtimes (Create booking).
 
 ○	Fetch booking by id.
@@ -25,42 +26,67 @@ Key Features:
 
 **Movie Management:**
 Key Features:
+
 ○	Add new movies with details: title, genre, duration, rating, release_year.
+
 ○	Update movie information (Can be partially). 
+
 ○	Delete a movie.
+
 ○	Fetch all movies.
+
 ○	Fetch movie by Id.
 
 **Showtime Management**
 Key Features:
+
 ○	Add showtimes for movies with details: movie, theater, start_time, end_time, price.
+
 ○	Update showtime details (Can be partially).
+
 ○	Delete a showtime.
+
 ○	Fetch showtime by id.
+
 ○	Fetch all showtimes.
+
 ●	Constraints:
+
 ○	No overlapping showtimes for the same theater.
 
 **users Management**
 Key Features:
+
 ○	Register a new user.
+
 ○	Fetch user by id.
+
 ○	Fetch user by username.
+
 ○	Fetch all users.
+
 ●	Constraints:
+
 ○	Can't choose the same user name more than once.
 
 **Theaters Management**
 Key Features:
+
 ○	Create a new theater.
+
 ○	Fetch theater by id.
+
 ○	Fetch all theaters.
+
 ○	Update theater Inforamtion (such as capacity etc.).
+
 ○	Delete a theater.
 
 **Seats Management**
 Key Features:
+
 ○	get available seats by show.
+
 ○	get seats by booking.
 
 
@@ -136,60 +162,90 @@ spring.jpa.show-sql=true
 ## API Endpoints
 
 Bookings:
-1) Create a Booking
+1) Create a Booking -
 POST /api/bookings
 
-2) Update an Existing Booking (Can be partially).
+2) Update an Existing Booking (Can be partially) -
 PUT /api/bookings/{bookingId}
 
-3) Get Booking by Id
+3) Get Booking by Id - 
    GET /api/bookings/{bookingId}
    
-6) Fetch all bookings.
+6) Fetch all bookings -
   GET /api/bookings
 
-5) Delete a booking.
+5) Delete a booking -
   DELETE /api/bookings/{bookingId}
 
 Movies:
-1) Create a Movie
+1) Create a Movie - 
    POST /api/movies
    
-2) Update an Existing movie (Can be partially)
+2) Update an Existing movie (Can be partially) - 
    PUT /api/movies/{movieId}
    
-3) Delete a movie.
+3) Delete a movie - 
    DELETE /api/movies/{movieId}
    
-4) Fetch all movies.
+4) Fetch all movies - 
    GET /api/movies
    
-5) Fetch movie by Id.
+5) Fetch movie by Id - 
    GET /api/movies/{movieId}
 
 Showtimes:
-1) Add showtime for movie
-2) Update showtime details (Can be partially).
-3) Delete a showtime.
-3) Fetch showtime by id.
-4) Fetch all showtimes.
+1) Add showtime -
+   POST /api/showtimes
+   
+2) Update showtime details (Can be partially) -
+   PUT /api/showtimes/{showtimeId}
+   
+3) Delete a showtime -
+   DELETE /api/showtimes/{showtimeId}
+   
+4) Fetch showtime by id -
+   GET /api/showtimes/{showtimeId}
+   
+5) Fetch all showtimes -
+   GET /api/showtimes
 
 Users:
-1) Register a new user.
-2) Fetch user by id.
-3) Fetch user by username.
-4) Fetch all users.
+1) Register a new user -
+   POST /api/users
+   
+2) Fetch user by id -
+   GET /api/users/{userId}
+   
+3) Fetch user by username -
+   GET /api/users/{userName}
+   
+4) Fetch all users -
+   GET /api/users
 
 Theaters:
-1) Create a new theater.
-2) Fetch theater by id.
-3) Fetch all theaters.
-4) Update theater Inforamtion (such as capacity etc.).
-5) Delete a theater.
+1) Create a new theater -
+   POST /api/theaters
+   
+2) Fetch theater by id -
+   GET /api/theaters/{theaterId}
+   
+3) Fetch all theaters -
+   GET /api/theaters
+   
+4) Update theater Inforamtion (such as capacity etc.) -
+   PUT /api/theaters/{theaterId}
+   
+5) Delete a theater -
+   DELETE /api/theaters/{theaterId}
+   
 
 Seats:
-1) get available seats by show.
-2) get seats by booking.
+1) get available seats by show -
+   GET /showtimes/{showtimeid}/seats
+   
+2) get seats by booking-
+   GET /bookings/{bookingId}/seats
+   
 
 ## Security Considerations
 
